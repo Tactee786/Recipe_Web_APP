@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- HTML5 doctype declaration -->
+<html lang="en"><!-- default language of the document content -->
+<head>
+<meta charset=UTF-8>
+		<title>Recipe Center</title><!-- web page title -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+		<link rel="stylesheet" type="text/css" href="CSS/indexCSS.css">
+		<script src="JavaScript/indexJS.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="indexCSS">
+</head>
+
+<body>
+<!-- Markup all web page content inside the 'body' tags -->
+	<div id="wrapper">
+	<a id="#top"></a>
+	<!-- The 'wrapper' contains all the page content -->
+    <header class="banner center"><!-- The main heading for the page -->
+		<h1 class="webpage">Recipes When You Want Them</h1><!-- title for when website sized -->
+		<h1 class="mobile">Recipes On Demand</h1><!-- title for mobile sized -->
+	</header>
+
+    <main><!-- The main page content -->
+		<!-- this div is used for the form were the user can type in what they would like to search for from the recipe API/database-->
+		<div id="searchArea">
+        <form  id="searchForm">
+        <fieldset class="center">
+
+			<input type="text" id="search" placeholder="Search Recipe.." class="inBlock">
+			<button type="submit" id="searchButton" form="searchForm" class="inBlock">  </button>
+
+		</fieldset>
+		<!-- span used to show error message to when the input field is empty-->
+		<p class="center"><span id="search_error" class="hint hide">Must have 1 or more letter in the search bar to continue.</span></p>
+		</form>    	
+		</div>
+
+		<!-- this button allows the user to choose to see the upload field instead of being forced to -->
+		<div id="showSendArea">
+        <form  id="showSendForm">
+        <fieldset id="showSendField" class="center">
+
+			<button type="submit" id="showSendButton" form="showSendForm" class="inBlock">Show Upload</button>
+
+		</fieldset>
+		</form>    	
+		</div>
+
+		<!-- this div is used for the form where the user can input data to be uploaded to the database via the recipe API I have created -->
+		<div id="sendArea" class="hide">
+        <form  id="sendForm" >
+        <fieldset id="sendField" class="center">
+
+			<input type="text" id="name" placeholder="Name of dish.." class="inBlock floatL" >
+			<input type="text" id="ingredients" id="ingredients" placeholder="Ingredients (',' when 1 item is done).." class="inBlock floatL" >
+			<input type="text" id="portion" placeholder="Portion size in terms of people.." class="inBlock floatL" >
+			<input type="text" id="preparation_time" placeholder="Prep time in minutes.." class="inBlock floatL">
+			<input type="text" id="cooking_time" id="cooking_time" placeholder="Cooking time minutes.." class="inBlock floatL" >
+			<input type="text" id="instructions" id="instructions" placeholder="Instructions.." class="inBlock floatL" >
+			<input type="text" id="images" placeholder="Image of dish.." class="inBlock floatL">
+			<input type="text" id="other" placeholder="Other info.." class="inBlock floatL">
+			
+			<button type="submit" id="sendButton" form="sendForm" class="inBlock floatR">  </button>
+		</fieldset>
+        
+		<!-- span used to show error message to when the input fields are empty -->
+		<p class="center"><span id="send_error" class="hint hide">Must have 1 or more letter in the input fields to upload a recipe. <br> Please fill in the required fields witht the corret inputs to complete a recipe.</span></p>
+		</form>    	
+		</div>
+
+		<!-- this is used to show a title when the results are shown-->
+		<header id="searchResults" class="hide">
+			<h2 class="center">Your Search Results </h2>
+		</header>
+
+		<!-- this div is used to display the loading gif for after you hit the search button or send button and are awaiting results from the API-->
+		<div id="loading" class="hide center">
+			<h2>Loading</h2>
+			<img src="https://ob273.brighton.domains/ci609/assignment1/client/Images/loadingGif.gif" alt="loading animation">
+		</div>
+
+		<!-- this is used to show a title when the upload to the database is successful -->
+		<header id="sendResults" class="hide">
+			<h3 class="center">Your Uplaod was Successful.</h3>
+		</header>
+
+		<!-- this div shows the results from the search/send button which is dynamically made via the javascript -->
+		<div id="results" class="hide center">
+			
+		</div>
+    
+    </main><!-- Close main page content -->  
+
+    <!-- Footer content, used to have a link to the top of the webpage for mobile and anyone who wants to use it -->
+	<footer>
+		<p><a href="#top">Go to top </a></p>
+		<p>Email:<a href="mailto:E.S.ob273@brighton.ac.uk">Omar Butt</a></p>
+		<small>© 2020, Omar Butt</small>
+	</footer>
+
+	</div><!-- Close 'wrapper' div -->
+
+
+</body><!-- Close 'body' -->
+</html><!-- Close 'html' -->
