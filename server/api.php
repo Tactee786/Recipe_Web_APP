@@ -10,7 +10,7 @@
 		//private $database = "ob273_ci609_test";
 		private $database = "ob273_ci609_ass";
 		private $username = "ob273_user1";
-		private $password = "thisisapain";
+		private $password = "KeepItSafe2021";
 		//status code set to 200, so if an error occurs it is changed in the correct area
 		private $statuscode = 200;
 		//My database connection variable so i can call it in any method that requires access
